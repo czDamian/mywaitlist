@@ -4,13 +4,14 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'My Waitlist',
-  description: 'Created by Damian',
+  title: 'DappEra Waitlist',
+  description: 'the future of IoTex Ecosystem',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+     
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )
