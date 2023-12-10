@@ -1,21 +1,5 @@
-
-function waitlistBenefits () {
-  return (
-    <div>
-      Help
-    </div>
-  )
-  
-}
-
 const Benefits = () => {
-  return (
-    <div>Benefits
+  return <div>Benefits</div>;
+};
 
-      <waitlistBenefits/>
-
-    </div>
-  )
-}
-
-export default Benefits
+export default Benefits;
