@@ -29,16 +29,16 @@ const FAQ = () => {
   return (
     <section className="my-40 lg:my-80 w-full max-w-4xl">
       <div>
-        <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4">Frequently Asked Questions</h1>
       </div>
       <div className=" ">
         {questions.map((question) => (
           <div
             key={question.id}
-            className="bg-slate-500 hover:bg-slate-600 p-4 xl:p-8 rounded-md lg:rounded-xl my-6">
+            className="bg-zinc-700 hover:bg-zinc-600 p-4 xl:p-6 rounded-sm lg:rounded-md my-4">
             <div className="font-bold text-black text-xl">{question.name}</div>
 
-            <div className=""> {question.desc}</div>
+            <div className="text-sm"> {question.desc}</div>
           </div>
         ))}
       </div>
