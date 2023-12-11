@@ -37,7 +37,7 @@ const Header = () => {
           </Link>
           <Link
             href="#waitlist"
-            className="border border-green-400 rounded-md px-2 py-1 hover:no-underline hover:text-white hover:border-white  ">
+            className="border border-green-400 rounded-md px-2 py-1 hover:no-underline hover:text-white hover:border-white hidden md:block ">
             Join Waitlist
           </Link>
         </div>
