@@ -5,10 +5,10 @@
 
 @layer components{
   body{
-    @apply bg-stone-950 text-white text-base
+    @apply bg-neutral-900 text-white text-sm max-w-[1500px] grid place-items-center
   }
   a{
-    @apply text-green-400 px-1 
+    @apply text-white
   }
   a:hover{
     @apply underline 

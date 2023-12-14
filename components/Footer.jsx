@@ -1,33 +1,24 @@
-import Image from "next/image";
 import Link from "next/link";
-import twitter from "../asset/twitter250.svg";
-import telegram from "../asset/telegram.svg";
+import { FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="flex justify-between items-center py-10 px-4">
-      <div className="text-center opacity-80">
+      <div className="text-center ">
         Copyright 2023 DappEra <div>All rights reserved.</div>
       </div>
       <div className=" ">
         <div className="flex items-center">
           <Link href="#">
-            <Image
-              src={twitter}
-              className="bg-green-400 rounded-md hover:bg-white"
-              alt="twitter-x"
-              height={32}
-              width={32}
-            />
+            <FaFacebook className="text-3xl px-1" />
           </Link>
           <Link href="#">
-            <Image
-              src={telegram}
-              className="bg-green-400 rounded-md hover:bg-white"
-              alt="telegram"
-              height={32}
-              width={32}
-            />
+            <FaWhatsapp className="text-3xl px-1" />
+          </Link>
+          <Link href="#">
+            <FaTelegram className="text-3xl px-1" />
           </Link>
         </div>
       </div>

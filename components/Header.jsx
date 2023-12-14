@@ -1,46 +1,58 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.jpg";
-import twitter from "../asset/twitter250.svg";
-import telegram from "../asset/telegram.svg";
+import { FaBars } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
+import { useState } from "react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="flex justify-between items-center p-3 ">
+    <header className="flex justify-between items-center p-3  ">
       <div className="flex justify-between items-center">
         <div className="">
           <Image src={logo} alt="logo" height={35} width={35} />
         </div>
-        <div className="px-2 text-2xl">
-          Dapp<span className="text-green-400">Era</span>{" "}
+        <div className="px-2 text-2xl font-bold">
+          Dapp<span className="text-green-700">Era</span>
         </div>
       </div>
-      <div className=" ">
-        <div className="flex items-center">
-          <Link href="#">
-            <Image
-              src={twitter}
-              className="bg-green-400 rounded-md hover:bg-white"
-              alt="twitter-x"
-              height={32}
-              width={32}
-            />
-          </Link>
-          <Link href="#">
-            <Image
-              src={telegram}
-              className="bg-green-400 rounded-md hover:bg-white"
-              alt="telegram"
-              height={32}
-              width={32}
-            />
-          </Link>
+      <div className=" flex items-center justify-center ">
+        <div className="mx-2">
           <Link
             href="#waitlist"
-            className="border border-green-400 rounded-md px-2 py-1 hover:no-underline hover:text-white hover:border-white hidden md:block ">
+            className="border bg-gray-900 border-neutral-100 rounded-md px-4 py-2 hover:no-underline hover:bg-green-900">
             Join Waitlist
           </Link>
         </div>
+        <div className="">
+          <button
+            className="relative text-2xl border border-transparent hover:bg-gray-900 hover:border-white py-1 px-2  rounded-md cursor-pointer "
+            onClick={() => setIsOpen((prev) => !prev)}>
+            {!isOpen ? <FaBars /> : <HiX />}
+          </button>
+        </div>
+        {isOpen && (
+          <div className="absolute top-16 right-5 flex flex-col  items-end shadow-sm shadow-white ">
+            <Link
+              href="#waitlist"
+              className="no-underline bg-neutral-900 py-2 px-4 w-full">
+              About Us
+            </Link>
+            <Link
+              href="#waitlist"
+              className="no-underline bg-neutral-900 py-2 px-4 w-full">
+              Discord
+            </Link>
+            <Link
+              href="#waitlist"
+              className="no-underline bg-neutral-900 py-2 px-4 w-full">
+              Join Waitlist
+            </Link>
+          </div>
+        )}
       </div>
     </header>
   );
