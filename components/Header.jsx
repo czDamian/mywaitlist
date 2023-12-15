@@ -27,32 +27,40 @@ const Header = () => {
             Join Waitlist
           </Link>
         </div>
-        <div className="">
+        <div className=" md:hidden ">
           <button
-            className="relative text-2xl border border-transparent hover:bg-gray-900 hover:border-white py-1 px-2  rounded-md cursor-pointer "
+            className="relative text-2xl border border-transparent hover:bg-gray-900 hover:border-white py-1 px-2  rounded-md cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}>
             {!isOpen ? <FaBars /> : <HiX />}
           </button>
         </div>
         {isOpen && (
-          <div className="absolute top-16 right-5 flex flex-col  items-end shadow-sm shadow-white ">
-            <Link
-              href="#waitlist"
-              className="no-underline bg-neutral-900 py-2 px-4 w-full">
-              About Us
+          <div className="absolute top-16 left-0 flex flex-col  items-end shadow-sm shadow-white w-full h-full  z-10 bg-slate-900">
+            <Link target="_blank" href="#waitlist" className="py-2 px-4 w-full">
+              Telegram
             </Link>
             <Link
-              href="#waitlist"
-              className="no-underline bg-neutral-900 py-2 px-4 w-full">
-              Discord
-            </Link>
-            <Link
-              href="#waitlist"
-              className="no-underline bg-neutral-900 py-2 px-4 w-full">
-              Join Waitlist
+              target="_blank"
+              href="https://x.com/OnDappEra"
+              className="py-2 px-4 w-full">
+              Twitter
             </Link>
           </div>
         )}
+        <div className="hidden md:block">
+          <Link
+            target="_blank"
+            href="https://x.com/OnDappEra"
+            className="no-underline py-2 px-4 w-full">
+            Twitter
+          </Link>
+          <Link
+            target="_blank"
+            href="https://t.me/iotex_daily"
+            className="no-underline  py-2 px-4 w-full">
+            Telegram
+          </Link>
+        </div>
       </div>
     </header>
   );

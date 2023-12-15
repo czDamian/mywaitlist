@@ -1,6 +1,4 @@
 "use client";
-import mainsite from "../asset/mainSite.png";
-import Image from "next/image";
 import { useState } from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 
@@ -29,6 +27,8 @@ const WaitlistForm = () => {
   return (
     <div>
       <form name="waitlist" action="#" method="post" onSubmit={submitEmail}>
+        <div className="text-red-500 text-sm text-center">{error}</div>
+
         <div className="flex justify-center items-center flex-col md:flex-row ">
           <div className="flex border border-neutral-100 rounded-md p-2 gap-2 w-80 md:w-96">
             <label htmlFor="email" className="">
@@ -43,7 +43,6 @@ const WaitlistForm = () => {
               id="email"
             />
           </div>
-          <div className="text-red-500">{error}</div>
           <button
             className="mx-2 border bg-gray-900 border-green-400 rounded-md text-white px-8 md:px-12 hover:bg-green-700 active:bg-green-800 w-fit my-2 md:my-0 py-3"
             type="submit">
@@ -51,14 +50,6 @@ const WaitlistForm = () => {
           </button>
         </div>
       </form>
-
-      <div className="  my-8 grid place-items-center">
-        <Image
-          src={mainsite}
-          alt="main site"
-          className=" w-full sm:w-96 lg:w-[500px] "
-        />
-      </div>
     </div>
   );
 };

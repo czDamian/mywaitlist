@@ -3,6 +3,7 @@ import { FaGamepad } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
 import { FaGifts } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
+import { FaBtc } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -43,16 +44,30 @@ const Benefits = () => {
       img: <FaClock />,
       class: "bg-red-400 rounded",
       alt: "redalarm",
+    },{
+      id: 5,
+      name: "DEFI TVL",
+      desc: "Get up-to-date information on decentralized finance",
+      img: <FaFlag />,
+      class: "bg-red-400 rounded",
+      alt: "redalarm",
+    },{
+      id: 6,
+      name: "IoTex Ecosystem",
+      desc: "Seamselss news and up-to-date information about the IoTex Ecosystem and so much more",
+      img: <FaBtc />,
+      class: "bg-red-400 rounded",
+      alt: "redalarm",
     },
   ];
   return (
-    <section className="my-20 xl:my-40 mx-3 md:mx-8 xl:mx-16 p-4 ">
-      <div>
-        <h1 className="text-3xl text-center font-bold mb-4">
+    <section className="my-20 xl:my-40 mx-1 md:mx-8 xl:mx-16 p-3">
+      <div className="bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
+        <h1 className="text-3xl text-center font-bold">
           Why Should I join?
         </h1>
       </div>
-      <div className="  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 my-2">
         {items.map((item) => (
           <div
             data-aos="fade-zoom-in"
@@ -60,11 +75,11 @@ const Benefits = () => {
             data-aos-easing="ease"
             key={item.id}
             data-aos-duration="600">
-            <div className="bg-gray-800 p-4 xl:p-8 rounded-md lg:rounded-xl">
+            <div className="bg-gray-800 p-6 xl:p-8 rounded-md lg:rounded-xl">
               <div className="font-extrabold  text-xl"> {item.name} </div>
-              <div className="flex justify-between items-center py-2">
+              <div className="flex justify-between items-center py-3">
                 <div className="opacity-70"> {item.desc}</div>
-                <div className="flex-shrink-0 text-4xl">{item.img}</div>
+                <div className="flex-shrink-0 text-4xl mx-2">{item.img}</div>
               </div>
             </div>
           </div>

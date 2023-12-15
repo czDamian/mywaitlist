@@ -1,3 +1,5 @@
+import { FaCircleQuestion } from "react-icons/fa6";
+
 const FAQ = () => {
   const questions = [
     {
@@ -28,17 +30,24 @@ const FAQ = () => {
   ];
   return (
     <section className="my-40 lg:my-80 w-full ">
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+      <div className=" bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
+        <h1 className="text-2xl text-center sm:text-3xl font-bold">
+          Frequently Asked Questions
+        </h1>
       </div>
-      <div className=" ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-2 my-2 ">
         {questions.map((question) => (
           <div
             key={question.id}
-            className="bg-gray-800  p-4 xl:p-6 lg:rounded my-1">
-            <div className="font-bold  text-xl">{question.name}</div>
+            className="bg-gray-800 flex flex-row items-center justify-start p-4 xl:p-6 rounded-md lg:rounded-lg my-2 border border-transparent hover:border-white">
+            <div className="text-4xl mx-3">
+              <FaCircleQuestion />
+            </div>
+            <div className="">
+              <div className="font-bold  text-lg">{question.name}</div>
 
-            <div className="text-sm opacity-50 py-2"> {question.desc}</div>
+              <div className="text-sm opacity-50 py-3"> {question.desc}</div>
+            </div>
           </div>
         ))}
       </div>
