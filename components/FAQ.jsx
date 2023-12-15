@@ -5,7 +5,7 @@ const FAQ = () => {
     {
       id: 1,
       name: "What is DappEra?",
-      desc: "This is the more reason why you should join our community, be active and engage with other members",
+      desc: "DappEra is a Decentralized Application built on the IoTex Ecosystem. DappEra offers a wide range of services including defi tvl, depin and so much more",
     },
     {
       id: 2,
@@ -15,17 +15,17 @@ const FAQ = () => {
     {
       id: 3,
       name: "How many times can I apply for the waitlist?",
-      desc: "Ask your ancestors... question",
+      desc: "You can only use an email to sign up once",
     },
     {
       id: 4,
       name: "When is the waitlist application ending?",
-      desc: "This is the more reason why you should join our community, be active and engage with other members",
+      desc: "No specific date has been provided yet. But remember that it's first come first served",
     },
     {
       id: 5,
       name: "Is DappEra secure?",
-      desc: "you ask too much questions",
+      desc: "Yes. DappEra is trusted by thousands of users worldwide.",
     },
   ];
   return (
