@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="text-center my-20 leading-8 md:leading-10 text-2xl md:text-4xl">
         <div>Experience DappEra,</div>
         <div className="italic mt-2 text-sm">
-          the future of <span className="text-green-400">IoTex</span> Ecosystem
+          built on the  <span className="text-green-400">IoTex</span> Ecosystem
         </div>
       </div>
       <div className="  my-8 grid place-items-center">
