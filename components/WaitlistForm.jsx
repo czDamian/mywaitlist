@@ -9,7 +9,6 @@ const WaitlistForm = () => {
 
   const validateEmail = (e) => {
     setEmail(e.target.value);
-    console.log(email);
 
     if (email === "") {
       setError("the email cannot be empty");
@@ -24,10 +23,8 @@ const WaitlistForm = () => {
     e.preventDefault();
     if (validateEmail(e)) {
       alert("You are  qualified!!!");
-      console.log(email);
     } else {
-      alert("dey whine yourself");
-      console.log(email);
+      alert("You are not Qualified!!");
     }
   };
   return (
