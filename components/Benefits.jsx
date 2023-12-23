@@ -24,7 +24,7 @@ const Benefits = () => {
     {
       id: 2,
       name: "DEPIN",
-      desc: "Get access to DEPIN and enjoy seamless transactions",
+      desc: "Our unique and colorful Dapp makes DePin data easy to understand",
       img: <FaGifts />,
       class: "bg-blue-400 rounded",
       alt: "depin",

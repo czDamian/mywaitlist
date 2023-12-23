@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.jpg";
-import { FaBars } from "react-icons/fa";
+import { RiMenu3Line } from "react-icons/ri";
 import { HiX } from "react-icons/hi";
 import { useState } from "react";
 
@@ -16,8 +16,8 @@ const Header = () => {
           <Image src={logo} alt="logo" height={35} width={35} />
         </div>
         <div className="px-2 text-2xl font-bold">
-          Dapp<span className="text-green-700">Era</span>
-        </div>
+          <Link href="/" className="hover:no-underline"> DappEra</Link>
+          </div>
       </div>
       <div className=" flex items-center justify-center ">
         <div className="mx-2">
@@ -31,14 +31,11 @@ const Header = () => {
           <button
             className="relative text-2xl border border-transparent hover:bg-gray-900 hover:border-white py-1 px-2  rounded-md cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}>
-            {!isOpen ? <FaBars /> : <HiX />}
+            {!isOpen ? <RiMenu3Line /> : <HiX />}
           </button>
         </div>
         {isOpen && (
           <div className="absolute top-16 left-0 flex flex-col  items-end shadow-sm shadow-white w-full h-full  z-10 bg-slate-900">
-            <Link target="_blank" href="#waitlist" className="py-2 px-4 w-full">
-              Telegram
-            </Link>
             <Link
               target="_blank"
               href="https://x.com/OnDappEra"
@@ -53,12 +50,6 @@ const Header = () => {
             href="https://x.com/OnDappEra"
             className="no-underline py-2 px-4 w-full">
             Twitter
-          </Link>
-          <Link
-            target="_blank"
-            href="https://t.me/iotex_daily"
-            className="no-underline  py-2 px-4 w-full">
-            Telegram
           </Link>
         </div>
       </div>
