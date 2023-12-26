@@ -13,6 +13,9 @@
   a:hover{
     @apply underline 
   }
+  footer a{
+    @apply block text-slate-200 text-opacity-50
+  }
   
 
 }

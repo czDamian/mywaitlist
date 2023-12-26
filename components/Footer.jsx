@@ -1,29 +1,41 @@
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../public/logo.jpg";
-import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col-reverse sm:flex-row justify-between gap-x-4 gap-y-4 items-center py-10 px-4">
-      <div className="flex justify-between items-center">
-        <div className="">
-          <Image src={logo} alt="logo" height={35} width={35} />
+    <footer className="my-10">
+      <div className="grid grid-cols-2 md:grid-cols-4"> 
+        <div className="p-2 text-center">
+          <h1 className="font-bold">PRODUCTS</h1>
+          <a href="#" target="_blank">Iotex Daily</a>
+          <a href="#" target="_blank">Premium</a>
+          <a href="#" target="_blank">NFT</a>
+          <a href="#" target="_blank">List my Dapp</a>
         </div>
-        <div className="px-2 text-2xl font-bold">
-          Dapp<span className="text-green-700">Era</span>
+
+        <div className="p-2 text-center">
+          <h1 className="font-bold">INTEGRATIONS</h1>
+          <a href="#" target="_blank">Depin Scan</a>
+        </div>
+
+        <div className="p-2 text-center">
+          <h1 className="font-bold">CONTACT US</h1>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">Email</a>
+          <a href="#" target="_blank">Work With Us</a>
+        </div>
+
+        <div className="p-2 text-center">
+          <h1 className="font-bold">SUPPORTED CHAINS</h1>
+          <a href="#" target="_blank">Iotex</a>
+          <a href="#" target="_blank">Cosmos</a>
+          <a href="#" target="_blank">Osmosis (beta)</a>
         </div>
       </div>
-      <div className="text-center ">
-        Copyright 2023 DappEra <div>All rights reserved.</div>
-      </div>
-      <div className=" ">
-        <div className="flex items-center gap-2 text-3xl">
-          <Link target="_blank" href="https://x.com/OnDappEra">
-            <FaXTwitter className="text-3xl px-1" />
-          </Link>
+
+        <div className="text-center mt-8">
+          (c) 2023 DappEra
+          <Link href="#">Terms and Conditions</Link>
         </div>
-      </div>
     </footer>
   );
 };

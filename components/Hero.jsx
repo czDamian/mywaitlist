@@ -1,20 +1,36 @@
 import mainsite from "../asset/mainSite.png";
+import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <main>
-      <div className="text-center my-20 leading-8 md:leading-10 text-2xl md:text-4xl">
-        <div>Be the first to experience the future of web3 with DappEra!</div>
-        <div className="italic mt-2 text-sm">
-          join our waitlist for <span className="text-green-400">exclusive access</span> to groundbreaking features and insights
+    <main className="flex flex-col xl:flex-row justify-center place-items-center gap-20 my-20">
+      <div className="text-center  shrink-0 ">
+        <div className="font-bold text-4xl md:text-4xl">
+          Experience the future <br /> of web3
+        </div>
+        <div className="mt-2 text-sm opacity-80">
+          get exclusive access to groundbreaking features
+        </div>
+        <div className="flex flex-row justify-center items-center gap-4 mt-6">
+          <Link
+            className="hover:no-underline border-2 border-green-700 hover:bg-opacity-60  bg-green-700 rounded-full px-4 py-2"
+            href="#waitlist">
+            Join Waitlist
+          </Link>
+
+          <Link
+            className="hover:no-underline border-2 border-sky-500  hover:bg-sky-700 hover:text-white text-sky-500 rounded-full px-4 py-2"
+            href="#list-dapp">
+            List My Dapp
+          </Link>
         </div>
       </div>
-      <div className="  my-8 grid place-items-center">
+      <div className="">
         <Image
           src={mainsite}
           alt="dappera"
-          className="rounded-lg w-full md:max-w-[600px] "
+          className="rounded-xl w-full md:max-w-[600px] "
         />
       </div>
     </main>
