@@ -16,7 +16,7 @@ const Benefits = () => {
     {
       id: 1,
       name: "NFT SALES",
-      desc: "Get access to historic  data of NFT sales",
+      desc: "Unlock insights into the historical data of NFT sales",
       img: <FaCartPlus />,
       class: "bg-blue-400 rounded",
       alt: "NFT sales",
@@ -24,7 +24,7 @@ const Benefits = () => {
     {
       id: 2,
       name: "DEPIN",
-      desc: "Our unique and colorful Dapp makes DePin data easy to understand",
+      desc: "Our unique and vibrant Dapp simplifies the comprhension of DePin data",
       img: <FaGifts />,
       class: "bg-blue-400 rounded",
       alt: "depin",
@@ -32,7 +32,7 @@ const Benefits = () => {
     {
       id: 3,
       name: "GAME FI",
-      desc: "Get access to the web3 GameFi sector ",
+      desc: "Explore the Web3 GameFi sector for unparalleled opportunities",
       img: <FaGamepad />,
       class: "bg-blue-400 rounded",
       alt: "gamefi",
@@ -40,31 +40,33 @@ const Benefits = () => {
     {
       id: 4,
       name: "RED ALARM",
-      desc: "Protect yourself from scam tokens",
+      desc: "Safeguard yourself against fraudulent tokens",
       img: <FaClock />,
       class: "bg-red-400 rounded",
       alt: "redalarm",
-    },{
+    },
+    {
       id: 5,
       name: "DEFI TVL",
-      desc: "Get up-to-date information on decentralized finance",
+      desc: "Stay informed with real-time updates on decentralized finance",
       img: <FaFlag />,
       class: "bg-red-400 rounded",
       alt: "redalarm",
-    },{
+    },
+    {
       id: 6,
-      name: "IoTex Ecosystem",
-      desc: "Seamselss news and up-to-date information about the IoTex Ecosystem and so much more",
+      name: "BLOCKCHAINS",
+      desc: "Seamless news coverage and latest information about the IoTex Ecosystem and other blockchains",
       img: <FaBtc />,
       class: "bg-red-400 rounded",
       alt: "redalarm",
     },
   ];
   return (
-    <section className="my-20 xl:my-40 mx-1 md:mx-8 xl:mx-16 p-3">
-      <div className="bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
+    <section className="my-20 xl:my-4 md:mx-8 xl:mx-16">
+      <div className=" mb-4 bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
         <h1 className="text-3xl text-center font-bold">
-          Why Should I join?
+          What Awaits You
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 my-2">

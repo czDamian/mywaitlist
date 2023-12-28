@@ -30,6 +30,9 @@ const Header = () => {
           <Link href="#" className="py-2 px-4 w-full">
             Premium
           </Link>
+          <Link href="#" className="py-2 px-4 w-full">
+            Work With Us
+          </Link>
           <Link
             href="#waitlist"
             className="border bg-gray-900 border-neutral-100 rounded-md px-4 py-2 hover:no-underline hover:bg-green-900">

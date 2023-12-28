@@ -11,8 +11,8 @@ export default function Home() {
       <Header />
       <div className="mx-8">
         <Hero />
-        <WaitlistForm />
         <Benefits />
+        <WaitlistForm />
         <FAQ />
       </div>
       <Footer />

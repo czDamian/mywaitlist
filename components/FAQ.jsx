@@ -1,4 +1,4 @@
-import { FaCircleQuestion } from "react-icons/fa6";
+import { FaQuestion } from "react-icons/fa6";
 
 const FAQ = () => {
   const questions = [
@@ -41,7 +41,7 @@ const FAQ = () => {
             key={question.id}
             className="bg-gray-800 flex flex-row items-center justify-start p-4 xl:p-6 rounded-md lg:rounded-lg my-2 border border-transparent hover:border-white">
             <div className="text-4xl mx-3">
-              <FaCircleQuestion />
+              <FaQuestion />
             </div>
             <div className="">
               <div className="font-bold  text-lg">{question.name}</div>

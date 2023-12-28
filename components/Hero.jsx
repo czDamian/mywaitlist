@@ -14,13 +14,13 @@ const Hero = () => {
         </div>
         <div className="flex flex-row justify-center items-center gap-4 mt-6">
           <Link
-            className="hover:no-underline border-2 border-green-700 hover:bg-opacity-60  bg-green-700 rounded-full px-4 py-2"
+            className="hover:no-underline border-2 border-green-700 hover:bg-opacity-60  bg-green-950 rounded-full px-4 py-2"
             href="#waitlist">
             Join Waitlist
           </Link>
 
           <Link
-            className="hover:no-underline border-2 border-sky-500  hover:bg-sky-700 hover:text-white text-sky-500 rounded-full px-4 py-2"
+            className="hover:no-underline border-2 border-green-200 hover:border-green-700 hover:text-green-700  rounded-full px-4 py-2"
             href="#list-dapp">
             List My Dapp
           </Link>
