@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className=" flex items-center justify-center ">
         <div className="mx-2 hidden md:block">
-          <Link href="#" className="py-2 px-4 w-full">
+          <Link href="/dapp" className="py-2 px-4 w-full">
             List my Dapp
           </Link>
 
@@ -51,7 +51,7 @@ const Header = () => {
             <Link href="/" className="py-2 px-4 w-full">
               Home
             </Link>
-            <Link href="#" className="py-2 px-4 w-full">
+            <Link href="/dapp" className="py-2 px-4 w-full">
               List my Dapp
             </Link>
             <Link href="#" className="py-2 px-4 w-full">
