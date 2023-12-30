@@ -20,7 +20,7 @@ const Hero = () => {
           </Link>
 
           <Link
-            className="hover:no-underline border-2 border-green-200 hover:border-green-700 hover:text-green-700  rounded-full px-4 py-2"
+            className="hover:no-underline border-2 border-white hover:border-green-700 hover:text-green-700  rounded-full px-4 py-2"
             href="#list-dapp">
             List My Dapp
           </Link>
