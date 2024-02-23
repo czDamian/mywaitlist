@@ -43,7 +43,7 @@ const WaitlistForm = () => {
       setSuccessMsg("Thank you for subscribing");
     } catch (error) {
       console.error("Error submitting email:", error);
-      setError("Failed to add");
+      setError("Form is closed at the moment");
     } finally {
       setIsLoading(false);
     }

@@ -19,9 +19,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.className} antialiased flex flex-col justify-between `}>
         <Header />
-        <div className="bg-[#f7f7f700] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
-          {children}
-        </div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>
