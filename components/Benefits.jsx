@@ -1,13 +1,8 @@
 "use client";
-import { FaGamepad } from "react-icons/fa";
-import { FaCartPlus } from "react-icons/fa";
-import { FaGifts } from "react-icons/fa";
-import { FaClock } from "react-icons/fa";
-import { FaBtc } from "react-icons/fa";
-import { FaFlag } from "react-icons/fa";
+import { FaGamepad, FaCartPlus, FaGifts, FaClock, FaBtc, FaFlag } from "react-icons/fa";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 const Benefits = () => {
   useEffect(() => {
     AOS.init({ duration: 4000 });
