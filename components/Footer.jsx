@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="py-8 mt-20 bg-slate-950">
+    <footer className="py-8 mt-5 bg-slate-950">
       <div className="grid grid-cols-2 sm:grid-cols-4"> 
         <div className="p-2 text-center">
           <h1 className="font-bold">PRODUCTS</h1>

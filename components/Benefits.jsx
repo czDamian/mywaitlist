@@ -76,7 +76,7 @@ const Benefits = () => {
             data-aos-easing="ease-in-sine"
             data-aos-once="true"
             data-aos-duration="600">
-            <div className="bg-slate-800 bg-opacity-50 p-6 xl:p-8 rounded-xl">
+            <div className="bg-slate-900 p-6 xl:p-8 rounded-xl">
               <div className="font-extrabold text-xl"> {item.name} </div>
               <div className="flex justify-between items-center py-3">
                 <div className="opacity-70"> {item.desc}</div>

@@ -3,67 +3,61 @@ import { useState } from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 
 const WaitlistForm = () => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({ email: "" });
   const [error, setError] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const validateEmail = (enteredEmail) => {
-    if (enteredEmail === "") {
-      setError("The email cannot be empty");
-      return false;
-    } else if (!regex.test(enteredEmail)) {
-      setError(`The email you entered is invalid`);
-      return false;
-    } else {
-      setError("");
-      return true;
-    }
-  };
-
   const handleChange = (e) => {
-    const enteredEmail = e.target.value;
-    setEmail(enteredEmail);
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
     setSuccessMsg("");
-    validateEmail(enteredEmail);
+    setError("");
   };
 
-  const submitEmail = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateEmail(email)) {
-      try {
-        setIsLoading(true);
-        const response = await fetch("/api/waitlist", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        });
 
-        const data = await response.json();
-
-        if (data.success) {
-          setSuccessMsg("Thank you for subscribing");
-        } else {
-          setError("Failed to subscribe");
-        }
-      } catch (error) {
-        console.error("Error submitting email:", error);
-        setError("Failed to add");
-      } finally {
-        setIsLoading(false);
-      }
-    } else {
-      setError("Invallid Email");
+    if (!validateEmail(formData.email)) {
+      setError("Invalid email format");
+      return;
     }
+
+    try {
+      setIsLoading(true);
+      const res = await fetch("api/emails", {
+        method: "POST",
+        body: JSON.stringify({ formData }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to create Email!");
+      }
+
+      setSuccessMsg("Thank you for subscribing");
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      setError("Failed to add");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const validateEmail = (enteredEmail) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    return regex.test(enteredEmail);
   };
 
   return (
     <section
       id="waitlist"
-      className="max-w-[800px] mx-auto p-4 rounded-lg flex flex-col md:flex-row justify-center gap-2 items-center bg-gradient-to-br from-slate-900 to-slate-950">
+      className="max-w-[800px] mx-auto p-4 rounded-lg flex flex-col md:flex-row justify-center gap-2 items-center bg-gradient-to-br from-slate-900 to-slate-950 mb-20">
       <div className="p-4 text-center md:text-left">
         <p className="text-3xl mb-2 font-bold">GM Fren!</p>
         <p>
@@ -71,9 +65,13 @@ const WaitlistForm = () => {
           innovations
         </p>
       </div>
-      <form action="#" method="post" onSubmit={submitEmail}>
-        <div className="text-red-500 text-sm text-center">{error}</div>
-        <div className="text-green-500 text-sm text-center">{successMsg}</div>
+      <form action="#" method="post" onSubmit={handleSubmit}>
+        {error && (
+          <div className="text-red-500 text-sm text-center">{error}</div>
+        )}
+        {successMsg && (
+          <div className="text-green-500 text-sm text-center">{successMsg}</div>
+        )}
         <div className="flex justify-center items-center flex-col gap-2">
           <div className="flex border rounded-md p-2 gap-2 w-80">
             <label htmlFor="email">
@@ -84,8 +82,9 @@ const WaitlistForm = () => {
               placeholder="Enter your email"
               className="bg-inherit outline-none w-full"
               onChange={handleChange}
-              value={email}
+              value={formData.email}
               id="email"
+              name="email"
             />
           </div>
           <button
