@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <main className="flex flex-col lg:flex-row justify-center place-items-center gap-20 my-20">
-      <div className="text-center  shrink-0 ">
+      <div className="text-center  shrink-0 bg-[#0a0b0b] p-2 rounded-lg">
         <div className="font-bold text-4xl md:text-4xl">
           Experience the future <br /> of web3
         </div>

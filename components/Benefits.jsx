@@ -52,7 +52,7 @@ const Benefits = () => {
   ];
   return (
     <section className="my-20 md:mx-8 xl:mx-12 pb-8">
-      <div className="bg-black mb-8 bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
+      <div className="bg-[#0a0b0b] mb-8 bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
         <h1 className="text-3xl text-center font-bold">What Awaits You</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 my-2">
@@ -64,7 +64,7 @@ const Benefits = () => {
             data-aos-easing="ease-in-sine"
             data-aos-once="true"
             data-aos-duration="600">
-            <div className="bg-slate-950 p-6 xl:p-8 rounded-xl">
+            <div className="bg-slate-900 p-6 xl:p-8 rounded-xl">
               <div className="font-extrabold text-xl"> {item.name} </div>
               <div className="flex justify-between items-center py-3">
                 <div className="opacity-70"> {item.desc}</div>

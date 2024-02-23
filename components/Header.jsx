@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="flex justify-between items-center p-3 bg-black  ">
+      <header className="flex justify-between items-center p-3 bg-[#0a0b0b] ">
         <div className="flex justify-between items-center">
           <div className="">
             <Image src={logo} alt="logo" height={35} width={35} />
@@ -47,7 +47,7 @@ const Header = () => {
         </button>
       </header>
 
-      <div className=" bg-black text-right pr-2">
+      <div className=" bg-[#0a0b0b] text-right pr-2">
         <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
           {navLinks.map(({ title, href }) => (
             <Link className="block p-2" key={href} href={href}>
