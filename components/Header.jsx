@@ -33,8 +33,8 @@ const Header = () => {
         <div className="md:flex hidden space-x-5 items-center">
           {navLinks.map(({ title, href }) => (
             <Link
-              className="block transition-all duration-500"
-              key={title}
+              className="block transition-all duration-1000"
+              key={href}
               href={href}>
               {title}
             </Link>
@@ -47,14 +47,14 @@ const Header = () => {
         </button>
       </header>
 
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-        {navLinks.map(({ title, href }) => (
-          <div className=" bg-black text-right px-4 py-2">
-            <Link className="block" key={title} href={href}>
+      <div className=" bg-black text-right px-4 py-2">
+        <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
+          {navLinks.map(({ title, href }) => (
+            <Link className="block" key={href} href={href}>
               {title}
             </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
