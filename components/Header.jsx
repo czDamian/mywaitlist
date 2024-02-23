@@ -43,14 +43,14 @@ const Header = () => {
         <button
           className="md:hidden text-green-300 font-bold p-1 border border-transparent hover:border-green-200 rounded-lg "
           onClick={toggleMenu}>
-          <div className="text-3xl">{!isOpen ? <RiMenu3Line /> : <HiX />}</div>
+          <div className="text-2xl">{!isOpen ? <RiMenu3Line /> : <HiX />}</div>
         </button>
       </header>
 
-      <div className=" bg-black text-right px-4 py-2">
+      <div className=" bg-black text-right pr-2">
         <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
           {navLinks.map(({ title, href }) => (
-            <Link className="block" key={href} href={href}>
+            <Link className="block p-2" key={href} href={href}>
               {title}
             </Link>
           ))}
