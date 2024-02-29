@@ -78,7 +78,7 @@ const WaitlistForm = () => {
         )}
       </div>
       <form action="#" method="post" onSubmit={handleSubmit}>
-        <div className="flex justify-center items-center flex-col gap-2">
+        <div className="flex justify-center items-center flex-col gap-2 my-4 sm:my-0">
           <EmailInput value={formData.email} onChange={handleChange} />
           <PointInput value={formData.points} onChange={handleChange} />
           <AddressInput value={formData.address} onChange={handleChange} />
