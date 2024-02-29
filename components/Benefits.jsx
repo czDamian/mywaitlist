@@ -47,10 +47,10 @@ const Benefits = () => {
   ];
   return (
     <section className="my-20 md:mx-8 xl:mx-12 pb-8">
-      <div className="bg-[#0a0b0b] mb-8 bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
-        <h1 className="text-3xl text-center font-bold">What Awaits You</h1>
+      <div className="backdrop-blur-lg mb-8 bg-gradient-to-r from-transparent from-10% via-sky-950 via-40% to-transparent to-90% py-3">
+        <h1 className="text-3xl text-center font-bold">Why DappEra?</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 my-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-1">
         {items.map((item) => (
           <div
             key={item.id}
@@ -59,7 +59,7 @@ const Benefits = () => {
             data-aos-easing="ease-in-sine"
             data-aos-once="true"
             data-aos-duration="600">
-            <div className="bg-slate-900 p-6 xl:p-8 rounded-xl">
+            <div className=" bg-gradient-to-br from-slate-900 to-slate-950 p-6 xl:p-8 rounded-xl border border-transparent hover:border-white">
               <div className="font-extrabold text-xl"> {item.name} </div>
               <div className="flex justify-between items-center py-3">
                 <div className="opacity-70"> {item.desc}</div>

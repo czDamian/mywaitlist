@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <main className="flex flex-col lg:flex-row justify-center place-items-center gap-20 my-20">
-      <div className="text-center  shrink-0 bg-[#0a0b0b] p-2 rounded-lg">
+      <div className="text-center  shrink-0 bg-inherit backdrop-blur-lg p-2 rounded-lg">
         <div className="font-bold text-4xl md:text-4xl">
           Experience the future <br /> of web3
         </div>
@@ -20,7 +20,7 @@ const Hero = () => {
           </Link>
 
           <Link
-            className="hover:no-underline border bg-black border-white hover:border-green-700 hover:text-green-700  rounded-full px-4 py-2"
+            className="hover:no-underline border bg-[#0c0c18] border-white hover:border-green-700 hover:text-green-700  rounded-full px-4 py-2"
             href="/dapp">
             List My Dapp
           </Link>

@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
-import { FaRegEnvelope } from "react-icons/fa";
+import { PointInput, EmailInput, AddressInput } from "./FormInputs";
 
 const WaitlistForm = () => {
-  const [formData, setFormData] = useState({ email: "" });
+  const [formData, setFormData] = useState({
+    email: "",
+    address: "",
+    points: 50,
+  });
   const [error, setError] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -37,10 +41,12 @@ const WaitlistForm = () => {
       });
 
       if (!res.ok) {
-        throw new Error("Failed to create Email!");
+        throw new Error("Failed to subscribe!");
       }
 
-      setSuccessMsg("Thank you for subscribing");
+      setSuccessMsg(
+        "You have successfully subscribed to the waitlist. Use your unique referral link to get more points. https://dappera.io#waitlist"
+      );
     } catch (error) {
       console.error("Error submitting email:", error);
       setError("Form is closed at the moment");
@@ -57,36 +63,25 @@ const WaitlistForm = () => {
   return (
     <section
       id="waitlist"
-      className="max-w-[800px] mx-auto p-4 rounded-lg flex flex-col md:flex-row justify-center gap-2 items-center bg-gradient-to-br from-slate-900 to-slate-950 mb-20">
+      className="max-w-[800px] mx-auto p-4 md:p-6 rounded-lg flex flex-col md:flex-row justify-center gap-2 items-center bg-gradient-to-br from-slate-900 to-slate-950 mb-20">
       <div className="p-4 text-center md:text-left">
         <p className="text-3xl mb-2 font-bold">GM Fren!</p>
-        <p>
+        <p className="mb-4">
           Subscribe to get exclusive access to groundbreaking features and
           innovations
         </p>
-      </div>
-      <form action="#" method="post" onSubmit={handleSubmit}>
         {error && (
-          <div className="text-red-500 text-sm text-center">{error}</div>
+          <div className="text-red-500 text-sm">{error}</div>
         )}
         {successMsg && (
-          <div className="text-green-500 text-sm text-center">{successMsg}</div>
+          <div className="text-green-500 text-sm">{successMsg}</div>
         )}
+      </div>
+      <form action="#" method="post" onSubmit={handleSubmit}>
         <div className="flex justify-center items-center flex-col gap-2">
-          <div className="flex border rounded-md p-2 gap-2 w-80">
-            <label htmlFor="email">
-              <FaRegEnvelope className="text-2xl" />
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-inherit outline-none w-full"
-              onChange={handleChange}
-              value={formData.email}
-              id="email"
-              name="email"
-            />
-          </div>
+          <EmailInput value={formData.email} onChange={handleChange} />
+          <PointInput value={formData.points} onChange={handleChange} />
+          <AddressInput value={formData.address} onChange={handleChange} />
           <button
             className="mx-2 border bg-gray-900 border-green-400 rounded-md text-white px-8 hover:bg-green-700 active:bg-green-800 w-fit py-3"
             type="submit"
