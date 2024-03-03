@@ -9,9 +9,7 @@ const Footer = () => {
           <a href="https://x.com/iotex_daily" target="_blank">
             Iotex Daily
           </a>
-          <a href="#premium" target="_blank">
-            Premium
-          </a>
+
           <a href="https://opensea.io" target="_blank">
             NFT
           </a>
@@ -45,14 +43,12 @@ const Footer = () => {
           <a href="#" target="_blank">
             Email
           </a>
-          <a href="#" target="_blank">
-            Work With Us
-          </a>
+          <Link href="/work-with-us">Work With Us</Link>
         </div>
       </div>
 
       <div className="text-center text-sm mt-8 mb-2">
-        <Link href="#">Terms and Conditions</Link>
+        <Link href="/terms-and-conditions">Terms and Conditions</Link>
       </div>
     </footer>
   );

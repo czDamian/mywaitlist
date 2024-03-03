@@ -1,7 +1,6 @@
-
 ## DAPPERA WAITLIST
 
-Experience the future of web3 with Dappera [Website](https://dappera.io). Website created and designed by Damian
+Experience the future of web3 with Dappera [Visit Website](https://dappera.io). 
 
 ## TECHNOLOGIES USED
 

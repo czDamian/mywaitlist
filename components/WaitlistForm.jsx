@@ -43,7 +43,6 @@ const WaitlistForm = () => {
       if (!res.ok) {
         throw new Error("Failed to subscribe!");
       }
-
       setSuccessMsg(
         "You have successfully subscribed to the waitlist. Use your unique referral link to get more points. https://dappera.io#waitlist"
       );
@@ -70,15 +69,14 @@ const WaitlistForm = () => {
           Subscribe to get exclusive access to groundbreaking features and
           innovations
         </p>
-        {error && (
-          <div className="text-red-500 text-sm">{error}</div>
-        )}
+
         {successMsg && (
           <div className="text-green-500 text-sm">{successMsg}</div>
         )}
       </div>
       <form action="#" method="post" onSubmit={handleSubmit}>
         <div className="flex justify-center items-center flex-col gap-2 my-4 sm:my-0">
+          {error && <div className="text-red-500 text-sm">{error}</div>}
           <EmailInput value={formData.email} onChange={handleChange} />
           <PointInput value={formData.points} onChange={handleChange} />
           <AddressInput value={formData.address} onChange={handleChange} />

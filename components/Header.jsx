@@ -9,7 +9,7 @@ import { HiX } from "react-icons/hi";
 const navLinks = [
   { title: "Benefits ", href: "#benefits" },
   { title: "List My Dapp", href: "dapp" },
-  { title: "Work With Us", href: "#work-with-us" },
+  { title: "Work With Us", href: "/work-with-us" },
 ];
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

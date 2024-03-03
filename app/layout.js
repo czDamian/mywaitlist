@@ -9,8 +9,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "DappEra Waitlist",
-  description: "the future of web3",
+  title: {
+    default: "DappEra Waitlist",
+    template: "%s || Dappera",
+  },
+  description: "experience the future of web3",
+  twitter: {
+    card: "summary_large_image"
+  }
 };
 
 export default function RootLayout({ children }) {

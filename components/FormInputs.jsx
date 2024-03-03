@@ -15,6 +15,7 @@ export const AddressInput = ({ value, onChange }) => {
         value={value}
         id="address"
         name="address"
+        required
       />
     </div>
   );
