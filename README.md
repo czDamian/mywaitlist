@@ -1,6 +1,6 @@
 ## DAPPERA WAITLIST
 
-Experience the future of web3 with Dappera [Visit Website](https://dappera.io). 
+Experience the future of web3 with Dappera [Visit Website](https://mywaitlist.vercel.app/). 
 
 ## TECHNOLOGIES USED
 
